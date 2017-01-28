@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        tools:context="ibrkovic.fesb.hr.nogometalica.FootballerActivity">
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:id="@+id/statusId"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+        <TextView
+                android:layout_width="20dp"
+                android:textSize="20sp"
+                android:layout_weight="1"
+                android:id="@+id/timerId"
+                android:gravity="left"
+                android:background="#faf605"
+                android:text="30s"
+                android:layout_height="wrap_content"/>
+
+        <TextView
+                android:layout_width="20dp"
+                android:layout_weight="2"
+                android:layout_marginLeft="200dp"
+                android:textSize="20sp"
+                android:background="#c1be20"
+                android:id="@+id/pointsId"
+                android:text="0/0"
+                android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <ImageView
+            android:layout_width="fill_parent"
+            android:id="@+id/footballerPictureId"
+
+            android:layout_below="@+id/statusId"
+            android:layout_marginTop="20dp"
+            android:layout_height="200dp"/>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_below="@+id/footballerPictureId"
+            android:layout_marginTop="30dp"
+            android:id="@+id/linLay1"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        <Button
+                android:text="Ronaldo"
+                android:tag="0"
+                android:id="@+id/btn0"
+                android:textSize="23sp"
+                android:layout_width="0dp"
+                android:padding="25dp"
+                android:background="#f2f"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5" android:onClick="getPosition"/>
+
+        <Button
+                android:text="Adriano"
+                android:tag="1"
+                android:id="@+id/btn1"
+                android:textSize="23sp"
+                android:padding="25dp"
+                android:layout_width="0dp"
+                android:background="#4aae3d"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5" android:onClick="getPosition"/>
+
+    </LinearLayout>
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:id="@+id/linLay2"
+            android:layout_below="@+id/linLay1"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        <Button
+                android:text="Rivaldo"
+                android:tag="2"
+                android:id="@+id/btn2"
+                android:layout_width="0dp"
+                android:textSize="23sp"
+                android:padding="25dp"
+                android:background="#a46589"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5" android:onClick="getPosition"/>
+
+        <Button
+                android:text="No name"
+                android:tag="3"
+                android:layout_width="0dp"
+                android:id="@+id/btn3"
+                android:textSize="23sp"
+                android:padding="25dp"
+                android:background="#c7631b"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5" android:onClick="getPosition"/>
+
+    </LinearLayout>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:id="@+id/result"
+            android:text=""
+            android:textSize="20sp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/linLay2"
+            android:layout_marginTop="30dp"
+            android:layout_height="wrap_content"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:id="@+id/totalScore"
+            android:text=""
+            android:textSize="26sp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/linLay2"
+            android:layout_toRightOf="@+id/result"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_height="wrap_content"/>
+
+    <Button android:layout_width="wrap_content"
+            android:id="@+id/restartId"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:text="Restart"
+            android:visibility="invisible"
+            android:background="#ff2"
+            android:textSize="30dp"
+            android:padding="15dp"
+            android:layout_height="wrap_content" android:onClick="restartGame"/>
+</RelativeLayout>
