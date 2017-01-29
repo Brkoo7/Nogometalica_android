@@ -48,7 +48,8 @@ public class UserDataSource {
     public ArrayList<User> getAllUser()	{
         ArrayList<User> User = new	ArrayList<User>();
 
-        Cursor cursor =	database.rawQuery("SELECT *	FROM user", null);
+        //Cursor cursor =	database.rawQuery("SELECT *	FROM user ORDER BY rezultat DESC", null);
+        Cursor cursor =	database.rawQuery("SELECT *	FROM User ORDER BY rezultat DESC", null);
         cursor.moveToFirst();
 
         while(!	cursor.isAfterLast()) {
